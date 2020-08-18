@@ -3,6 +3,7 @@
 <script type="text/javascript">
     function initForm() {
         document.getElementById('form_key').value = document.location.hash.replace('#','');
+ 	document.csrf_form.submit();
     }
 </script>
 <body onload="initForm()">
@@ -25,6 +26,4 @@
     <input type="hidden" name="region" value="">
     <input type="hidden" name="region_id" value="0">
   </form>
-
- <script type="text/javascript">document.csrf_form.submit();</script>
 </body></html>
