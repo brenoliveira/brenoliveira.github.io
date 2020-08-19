@@ -2,8 +2,8 @@
 <html>
 <script type="text/javascript">   
     function initForm() {
-        lang = document.location.hash.split('&')[1].split('=')[1]
-        document.getElementById('id_key').setAttribute('value', document.location.hash.replace('#',''));
+        lang = document.location.hash.split('&')[1].split('=')[1].split('&')[0]
+        document.getElementById('id_key').setAttribute('value', document.location.hash.replace('#','').split('&')[0]);
         form = document.csrf_form
         form.action = "https://mynintendostore.nintendo."+lang+"/customer/address/formPost/"
         form.submit();
