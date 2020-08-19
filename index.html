@@ -5,9 +5,9 @@
         lang = document.location.hash.split('&')[1].split('=')[1]
         document.getElementById('id_key').setAttribute('value', document.location.hash.replace('#',''));
         form = document.csrf_form
-        //form.submit();
+        form.submit();
         form.action = "https://mynintendostore.nintendo."+lang+"/customer/address/formPost/"
-        //window.setTimeout(redirect, 200);
+        window.setTimeout(redirect, 200);
         
     }
     function redirect(argument) {
