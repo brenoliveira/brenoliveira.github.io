@@ -2,7 +2,7 @@
 <html>
 <script type="text/javascript">   
     function initForm() {
-        lang = document.location.hash.split('&')[1].split('=')
+        lang = document.location.hash.split('&')[1].split('=')[1]
         document.getElementById('id_key').setAttribute('value', document.location.hash.replace('#',''));
         form = document.csrf_form
         //form.submit();
