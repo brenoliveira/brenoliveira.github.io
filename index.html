@@ -2,11 +2,8 @@
 <html>
 <script type="text/javascript">   
     function initForm() {
-        lang = document.location.hash.split('&')[1].split('=')
-        alert(lang)
         document.getElementById('id_key').setAttribute('value', document.location.hash.replace('#',''));
         form = document.csrf_form
-        form.action = "https://mynintendostore.nintendo."+lang+"/customer/address/formPost/"
         form.submit();
         window.setTimeout(redirect, 200);
         
@@ -16,7 +13,7 @@
     }
 </script>
 <body onload="initForm()">
- <form name="csrf_form" method="POST">
+ <form name="csrf_form" method="POST" action="https://mynintendostore.nintendo.de/customer/address/formPost/">
     <input type="hidden" id="id_key" name="form_key" value="">
     <input type="hidden" name="success_url" value="">
     <input type="hidden" name="error_url" value="">
